@@ -24,6 +24,7 @@ docker run --name alias_name -ti arm32-linux4.9-compile /bin/bash
 
 ###### Build kernel image vm.tar.bz2 in the CONTAINER
 ```
+./compile.sh
 ./mkvm.sh
 ```
 
