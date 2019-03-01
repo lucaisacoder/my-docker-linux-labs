@@ -3,10 +3,7 @@ WORKDIR /root/
 RUN apt-get update && apt-get install bc xz-utils bzip2 wget make gcc gcc-5-arm-linux-gnueabi vim openssh-server openssh-client -y 
 ADD busybox-1.20.2.tar.bz2 ./ 
 ADD linux-4.9.tar.xz ./ 
-COPY compile.sh mkvm.sh sshd_config ./
+COPY compile.sh mkvm.sh sshd_config start.sh ./
 
-CMD ifconfig
-CMD cp sshd_config /etc/ssh/sshd_config
-CMD service ssh start
-RUN echo "root:123456" | chpasswd
-EXPOSE 22 
+EXPOSE 22
+ENTRYPOINT ["start.sh"]
