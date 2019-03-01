@@ -5,3 +5,4 @@ ADD busybox-1.20.2.tar.bz2 ./
 ADD linux-4.9.tar.xz ./ 
 COPY compile.sh mkvm.sh ./
 
+RUN start.sh
