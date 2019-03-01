@@ -6,4 +6,4 @@ ADD linux-4.9.tar.xz ./
 COPY compile.sh mkvm.sh sshd_config start.sh ./
 
 EXPOSE 22
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT /root/start.sh && tail -f /dev/null
