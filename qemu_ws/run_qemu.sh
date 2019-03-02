@@ -1,0 +1,2 @@
+cd vm
+./boot.sh
