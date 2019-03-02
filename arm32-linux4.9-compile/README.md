@@ -38,3 +38,13 @@ cd vm
 bash mkrootfs.sh 
 bash boot.sh 
 ```
+
+### SSH login
+```
+username: root
+password: 123456
+```
+###### How to check container's IP address?
+```
+cat /etc/hosts
+``` 
